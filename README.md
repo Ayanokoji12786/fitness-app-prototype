@@ -1,2 +1,5 @@
-# fitness-app-prototype
-Simple fitness app prototype built to learn debugging and deployment.
+# Fitness App Prototype
+
+This is a simple fitness app prototype.
+
+I built this app to learn how to deploy an app, debug errors, and test it on a real Android device before building a more complex project.
