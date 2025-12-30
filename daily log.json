@@ -1,0 +1,49 @@
+{
+  "name": "DailyLog",
+  "type": "object",
+  "properties": {
+    "log_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the log entry"
+    },
+    "exercises_completed": {
+      "type": "array",
+      "description": "List of completed exercises",
+      "items": {
+        "type": "object",
+        "properties": {
+          "exercise_name": {
+            "type": "string"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "water_glasses": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of glasses of water consumed"
+    },
+    "sleep_hours": {
+      "type": "number",
+      "default": 0,
+      "description": "Hours of sleep"
+    },
+    "steps": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of steps taken"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Personal notes for the day"
+    }
+  },
+  "required": [
+    "log_date"
+  ]
+}

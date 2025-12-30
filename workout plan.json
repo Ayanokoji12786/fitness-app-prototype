@@ -1,0 +1,72 @@
+{
+  "name": "WorkoutPlan",
+  "type": "object",
+  "properties": {
+    "plan_name": {
+      "type": "string",
+      "description": "Name of the workout plan"
+    },
+    "goal": {
+      "type": "string",
+      "description": "Fitness goal this plan targets"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level"
+    },
+    "duration_weeks": {
+      "type": "number",
+      "description": "Plan duration in weeks"
+    },
+    "exercises": {
+      "type": "array",
+      "description": "List of exercises in the plan",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string",
+            "description": "Day of week (Monday, Tuesday, etc.)"
+          },
+          "exercise_name": {
+            "type": "string",
+            "description": "Name of the exercise"
+          },
+          "description": {
+            "type": "string",
+            "description": "How to perform the exercise"
+          },
+          "duration_minutes": {
+            "type": "number",
+            "description": "Duration in minutes"
+          },
+          "sets": {
+            "type": "number",
+            "description": "Number of sets"
+          },
+          "reps": {
+            "type": "number",
+            "description": "Number of repetitions per set"
+          },
+          "video_url": {
+            "type": "string",
+            "description": "Optional video tutorial link"
+          },
+          "category": {
+            "type": "string",
+            "description": "Exercise category (cardio, strength, flexibility, etc.)"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "plan_name",
+    "goal"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "CommunityPost",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "description": "Post content"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether post is anonymous"
+    },
+    "likes": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of likes"
+    },
+    "replies": {
+      "type": "array",
+      "description": "Replies to the post",
+      "items": {
+        "type": "object",
+        "properties": {
+          "author_email": {
+            "type": "string"
+          },
+          "author_name": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "is_anonymous": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "content"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "age": {
+      "type": "number",
+      "description": "User's age in years"
+    },
+    "height": {
+      "type": "number",
+      "description": "Height in centimeters"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Weight in kilograms"
+    },
+    "body_type": {
+      "type": "string",
+      "enum": [
+        "ectomorph",
+        "mesomorph",
+        "endomorph"
+      ],
+      "description": "Body shape/type classification"
+    },
+    "fitness_goal": {
+      "type": "string",
+      "enum": [
+        "weight_loss",
+        "muscle_gain",
+        "flexibility",
+        "posture_improvement",
+        "endurance"
+      ],
+      "description": "Primary fitness goal"
+    },
+    "chest": {
+      "type": "number",
+      "description": "Chest measurement in centimeters"
+    },
+    "waist": {
+      "type": "number",
+      "description": "Waist measurement in centimeters"
+    },
+    "hips": {
+      "type": "number",
+      "description": "Hips measurement in centimeters"
+    },
+    "arms": {
+      "type": "number",
+      "description": "Arm circumference in centimeters"
+    },
+    "legs": {
+      "type": "number",
+      "description": "Leg circumference in centimeters"
+    },
+    "shoulder_width": {
+      "type": "number",
+      "description": "Shoulder width in centimeters"
+    },
+    "posture_notes": {
+      "type": "string",
+      "description": "User notes about posture or mobility issues"
+    },
+    "posture_score": {
+      "type": "number",
+      "description": "AI-calculated posture score (0-100)"
+    },
+    "symmetry_score": {
+      "type": "number",
+      "description": "AI-calculated body symmetry score (0-100)"
+    },
+    "workout_intensity": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Recommended workout intensity level"
+    },
+    "onboarding_completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user has completed onboarding"
+    }
+  },
+  "required": []
+}

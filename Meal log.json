@@ -1,0 +1,76 @@
+{
+  "name": "MealLog",
+  "type": "object",
+  "properties": {
+    "log_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the meal"
+    },
+    "meal_type": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "description": "Type of meal"
+    },
+    "foods": {
+      "type": "array",
+      "description": "List of foods in the meal",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "calories": {
+            "type": "number"
+          },
+          "protein": {
+            "type": "number"
+          },
+          "carbs": {
+            "type": "number"
+          },
+          "fat": {
+            "type": "number"
+          },
+          "serving_size": {
+            "type": "string"
+          },
+          "barcode": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "total_calories": {
+      "type": "number",
+      "description": "Total calories for this meal"
+    },
+    "total_protein": {
+      "type": "number",
+      "description": "Total protein in grams"
+    },
+    "total_carbs": {
+      "type": "number",
+      "description": "Total carbohydrates in grams"
+    },
+    "total_fat": {
+      "type": "number",
+      "description": "Total fat in grams"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the meal"
+    }
+  },
+  "required": [
+    "log_date",
+    "meal_type",
+    "foods"
+  ]
+}
